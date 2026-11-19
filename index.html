@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Profil — I Komang Werdagia Cahyadi Putra Kencana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="landing">
+
+  <!--
+    Tombol buka/tutup dompet: checkbox tersembunyi.
+    Label .hit (dompet), .dismiss (area gelap) dan .close (tombol Tutup)
+    sama-sama mengubah checkbox ini. Seluruh animasi digerakkan CSS
+    lewat selector  #buka:checked ~ ...
+  -->
+  <input type="checkbox" id="buka" class="toggle" aria-label="Buka dompet">
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span>Cahya</a>
+    <input type="checkbox" id="menu" class="menu-toggle" aria-label="Buka menu navigasi">
+    <label for="menu" class="menu-btn" aria-hidden="true"><span></span></label>
+    <label for="menu" class="menu-scrim" aria-hidden="true"></label>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="index.html" aria-current="page">Beranda</a>
+      <a href="tugas.html">Tugas</a>
+      <a href="isu-keamanan-data.html">Isu Keamanan Data</a>
+      <a href="langkah-hosting.html">Langkah Hosting</a>
+    </nav>
+  </header>
+
+  <main class="stage">
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <!-- KIRI: teks profil + nama besar -->
+    <section class="copy">
+      <p class="eyebrow">Profil Mahasiswa</p>
+      <p class="lead">Mahasiswa S1 Sistem Komputer di Institut Teknologi dan Bisnis (ITB) STIKOM Bali.</p>
+      <h1><span class="nw">I Komang</span> <span class="nw">Werdagia</span> <span class="nw">Cahyadi</span> <span class="nw">Putra Kencana</span></h1>
+    </section>
+
+    <!-- KANAN: dompet melayang -->
+    <div class="wallet-area">
+      <div class="scaler">
+        <div class="rig">
+
+          <!-- area klik -->
+          <label class="hit" for="buka" title="Klik untuk membuka dompet">
+            <span class="sr-only">Buka dompet</span>
+          </label>
+
+          <!-- bayangan di bawah dompet -->
+          <div class="shadow" aria-hidden="true"></div>
+
+          <!-- semua yang ikut melayang -->
+          <div class="floater">
+
+            <div class="imgs">
+              <img class="w w-open-empty" src="assets/wallet-open-empty.webp" alt="" decoding="async">
+              <img class="w w-open-card"  src="assets/wallet-open-card.webp"  alt="" decoding="async">
+              <img class="w w-closed"     src="assets/wallet-closed.webp"     alt="Dompet kulit hitam" decoding="async">
+            </div>
+
+            <!-- kartu mahasiswa: keluar dari jendela dompet, terbang ke tengah layar, berputar 1x -->
+            <div class="card-x">
+              <div class="card-y">
+                <div class="card-pos">
+                  <div class="card-persp">
+                    <div class="card-spin">
+                      <img class="face front" src="assets/card-front.webp" alt="Kartu mahasiswa tampak depan" decoding="async">
+                      <img class="face back"  src="assets/card-back.webp"  alt="Kartu mahasiswa tampak belakang" decoding="async">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <p class="hint"><span class="tap" aria-hidden="true"></span><span class="hint-text"><span class="t-klik">Klik</span><span class="t-ketuk">Ketuk</span> dompet untuk membukanya</span></p>
+    </div>
+  </main>
+
+  <!-- klik di area gelap untuk menutup (aktif setelah popup muncul) -->
+  <label class="dismiss" for="buka" aria-hidden="true"></label>
+
+  <!-- POP UP IDENTITAS (di tengah layar) -->
+  <section class="popup" role="dialog" aria-labelledby="judul-identitas">
+    <header class="p-head">
+      <img class="avatar" src="assets/foto.webp" alt="Foto mahasiswa">
+      <div>
+        <p class="eyebrow-s">Kartu Mahasiswa</p>
+        <h2 id="judul-identitas">I Komang Werdagia Cahyadi Putra Kencana</h2>
+      </div>
+    </header>
+
+    <dl class="data">
+      <div>
+        <dt>NIM</dt>
+        <dd>230010015</dd>
+      </div>
+      <div>
+        <dt>Jurusan</dt>
+        <dd>S1 - Sistem Komputer</dd>
+      </div>
+      <div>
+        <dt>Tempat / Tgl Lahir</dt>
+        <dd>Tangkup, 7 Juni 2004</dd>
+      </div>
+      <div>
+        <dt>Berlaku Sampai</dt>
+        <dd>Desember 2027</dd>
+      </div>
+      <div class="wide">
+        <dt>Institusi</dt>
+        <dd>Institut Teknologi dan Bisnis (ITB) STIKOM Bali</dd>
+      </div>
+    </dl>
+
+    <footer class="p-foot">
+      <a class="web" href="https://www.stikom-bali.ac.id" target="_blank" rel="noopener">www.stikom-bali.ac.id</a>
+      <label class="close" for="buka">Tutup</label>
+    </footer>
+  </section>
+
+</body>
+</html>

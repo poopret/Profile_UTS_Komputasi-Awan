@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tugas — Profil Mahasiswa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="subpage">
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span>Cahya</a>
+    <input type="checkbox" id="menu" class="menu-toggle" aria-label="Buka menu navigasi">
+    <label for="menu" class="menu-btn" aria-hidden="true"><span></span></label>
+    <label for="menu" class="menu-scrim" aria-hidden="true"></label>
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="index.html">Beranda</a>
+      <a href="tugas.html" aria-current="page">Tugas</a>
+      <a href="isu-keamanan-data.html">Isu Keamanan Data</a>
+      <a href="langkah-hosting.html">Langkah Hosting</a>
+    </nav>
+  </header>
+
+  <!-- HALAMAN TUGAS — kertas HVS bertumpuk + kertas note soal (HTML + CSS murni). -->
+  <main class="page tugas">
+    <h1 class="sr-only">Tugas</h1>
+
+    <div class="desk">
+
+      <!-- kertas note: soal tugas -->
+      <aside class="note" aria-label="Soal tugas">
+        <p class="note-tag">Tugas</p>
+        <p class="note-text">Coba berikan contoh dan penjelasan terhadap 3 pemangku kepentingan / stakeholder terhadap pengelolaan data untuk aplikasi cloud pada bidang</p>
+        <ol class="note-list">
+          <li>Reservasi Hotel,</li>
+          <li>SIM Rumah Sakit,</li>
+          <li>Perbankan.</li>
+        </ol>
+      </aside>
+
+      <!-- kertas HVS: .leaf = lembar + tepi kertas di bawahnya (dibuat dari CSS) agar tampak bertumpuk -->
+      <div class="pile">
+
+        <div class="leaf">
+        <article class="sheet" aria-label="Penjelasan dan contoh penerapan">
+          <p class="intro">Berikut adalah penjelasan dan contoh penerapannya pada tiga aplikasi SaaS di masing-masing bidang:</p>
+
+          <h3>1. Aplikasi Reservasi Hotel (SaaS <i>Property Management System / Booking Engine</i>)</h3>
+          <ul>
+            <li><b>Pengendali Data: Pihak Manajemen Hotel / Properti.</b> Hotel menentukan data apa saja yang wajib diisi saat <i>check-in</i> atau reservasi, lama penyimpanan data tamu, serta kebijakan privasi dan pemasaran.</li>
+            <li><b>Pemroses Data: Penyedia SaaS Reservasi Hotel</b> (beserta penyedia <i>cloud infrastructure</i> di baliknya). Mereka menyediakan aplikasi, basis data, enkripsi, dan <i>backup</i> untuk memproses transaksi kamar sesuai konfigurasi hotel tanpa menentukan tujuan bisnis data tersebut.</li>
+            <li><b>Pemilik Data: Tamu Hotel / Pelanggan</b> (seperti nama lengkap, nomor identitas/KTP/paspor, kontak, riwayat menginap, dan preferensi kamar).</li>
+          </ul>
+
+          <h3>2. SIM Rumah Sakit (SaaS <i>Hospital Information System / Electronic Medical Record</i>)</h3>
+          <ul>
+            <li><b>Pengendali Data: Manajemen Rumah Sakit / Fasilitas Pelayanan Kesehatan.</b> Rumah sakit bertanggung jawab penuh atas keputusan regulasi kesehatan, hak akses tenaga medis, kerahasiaan rekam medis, dan tujuan pengolahan data pelayanan pasien.</li>
+            <li><b>Pemroses Data: Penyedia SaaS SIM Rumah Sakit</b> (dan mitra <i>cloud</i> yang memenuhi standar keamanan data kesehatan). Mereka mengelola ketersediaan sistem, keamanan transmisi dan penyimpanan data, serta pemeliharaan aplikasi sesuai kontrak dan instruksi rumah sakit.</li>
+            <li><b>Pemilik Data: Pasien</b> (sebagai subjek data pribadi dan rekam medis, mencakup identitas, riwayat diagnosis, hasil laboratorium, alergi, dan riwayat tindakan medis).</li>
+          </ul>
+
+          <h3>3. Aplikasi Perbankan (SaaS <i>Core Banking / Loan Origination / Payment &amp; Compliance Platform</i>)</h3>
+          <ul>
+            <li><b>Pengendali Data: Bank / Lembaga Jasa Keuangan.</b> Bank menentukan kebijakan pemrosesan data nasabah, manajemen risiko, pelaporan regulator keuangan, serta standar keamanan dan retensi data sesuai hukum perbankan.</li>
+            <li><b>Pemroses Data: Penyedia SaaS Perbankan</b> (dan penyedia <i>cloud</i> yang ditunjuk). Mereka menjalankan perangkat lunak, komputasi, dan penyimpanan data transaksi atau proses bisnis tertentu berdasarkan perjanjian layanan (<i>SLA</i> dan <i>DPA</i>) serta arahan bank.</li>
+            <li><b>Pemilik Data: Nasabah Bank</b> (baik nasabah perorangan maupun korporasi, meliputi data identitas, rekening, saldo, riwayat transaksi, dan informasi kelayakan kredit).</li>
+          </ul>
+
+          <h3 class="tbl-title">Ringkasan Perbandingan</h3>
+          <div class="tbl-wrap">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th scope="col">Bidang Aplikasi SaaS</th>
+                  <th scope="col">Pengendali Data (Controller)</th>
+                  <th scope="col">Pemroses Data (Processor)</th>
+                  <th scope="col">Pemilik Data (Owner / Subject)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Hotel Reservasi</th>
+                  <td data-label="Pengendali Data (Controller)">Manajemen Hotel</td>
+                  <td data-label="Pemroses Data (Processor)">Vendor SaaS Reservasi &amp; <i>Cloud</i></td>
+                  <td data-label="Pemilik Data (Owner / Subject)">Tamu Hotel</td>
+                </tr>
+                <tr>
+                  <th scope="row">SIM Rumah Sakit</th>
+                  <td data-label="Pengendali Data (Controller)">Manajemen Rumah Sakit / Faskes</td>
+                  <td data-label="Pemroses Data (Processor)">Vendor SaaS SIM RS &amp; <i>Cloud</i></td>
+                  <td data-label="Pemilik Data (Owner / Subject)">Pasien</td>
+                </tr>
+                <tr>
+                  <th scope="row">Perbankan</th>
+                  <td data-label="Pengendali Data (Controller)">Bank / Lembaga Keuangan</td>
+                  <td data-label="Pemroses Data (Processor)">Vendor SaaS Perbankan &amp; <i>Cloud</i></td>
+                  <td data-label="Pemilik Data (Owner / Subject)">Nasabah</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>
