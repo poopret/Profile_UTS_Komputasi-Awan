@@ -2,12 +2,12 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Langkah Hosting — Profil Mahasiswa</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="subpage">
@@ -25,8 +25,272 @@
     </nav>
   </header>
 
-  <main class="page">
-    <!-- Halaman Langkah Hosting: sementara dikosongkan. Isi konten di sini. -->
+  <!--
+    HALAMAN LANGKAH HOSTING — 10 langkah hosting gratis dengan GitHub Pages.
+    Tiap langkah: judul + penjelasan + screenshot (kotak kuning = bagian yang diklik).
+    Klik/ketuk screenshot untuk memperbesar (checkbox tersembunyi, tanpa JavaScript).
+    Mau menambah langkah? Salin satu <li class="step"> dan beri id checkbox zoom yang baru.
+  -->
+  <main class="page hosting">
+    <div class="h-wrap">
+
+      <header class="h-hero">
+        <p class="eyebrow">Panduan</p>
+        <h1>Langkah Hosting <span class="acc">Website dengan GitHub</span></h1>
+        <p class="h-lead">Cara menaruh website di internet secara gratis memakai GitHub Pages — dari login sampai websitemu bisa dibuka online.</p>
+        <ul class="h-chips" aria-label="Ringkasan panduan">
+          <li>10 langkah</li>
+          <li>Gratis</li>
+          <li>Cukup lewat browser</li>
+        </ul>
+      </header>
+
+      <section class="phase" aria-labelledby="tahap-1">
+        <h2 class="phase-title" id="tahap-1"><span class="phase-pill">Tahap 1</span>Masuk ke GitHub</h2>
+        <ol class="steps" role="list">
+          <li class="step">
+            <span class="node" aria-hidden="true">1</span>
+            <article class="step-card">
+              <p class="step-no">Langkah 1 dari 10</p>
+              <h3>Buka halaman GitHub</h3>
+              <p class="step-text">Buka <b class="ui">github.com</b> di browser. Ini halaman pertama GitHub sebelum login. Klik <b class="ui">Sign in</b> di pojok kanan atas untuk melanjutkan.</p>
+              
+              
+              <figure class="shot">
+                <input type="checkbox" id="zoom-1" class="zoom-toggle" aria-label="Perbesar gambar langkah 1">
+                <label for="zoom-1" class="shot-frame" style="--ar:2.2830">
+                  <span class="win-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="shot-img">
+                    <img src="assets/hosting-01.webp" width="1299" height="569" alt="Halaman depan github.com dengan tombol Sign in di pojok kanan atas" decoding="async">
+                    <span class="hl" style="left:85.142%;top:3.163%;width:5.697%;height:6.327%"></span>
+                    <i class="snap-mid" aria-hidden="true"></i>
+                  </span>
+                  <span class="zoom-hint" aria-hidden="true"></span>
+                </label>
+              </figure>
+            </article>
+          </li>
+          <li class="step">
+            <span class="node" aria-hidden="true">2</span>
+            <article class="step-card">
+              <p class="step-no">Langkah 2 dari 10</p>
+              <h3>Login ke akun GitHub</h3>
+              <p class="step-text">Di halaman login, isi data akunmu lalu tekan tombol hijau. Belum punya akun? Pilih <b class="ui">Create an account</b> di bagian bawah.</p>
+              <ol class="marks"><li><b class="mk">1</b><span>Isi <b class="ui">Username or email address</b></span></li><li><b class="mk">2</b><span>Isi <b class="ui">Password</b></span></li><li><b class="mk">3</b><span>Tekan <b class="ui">Sign in</b></span></li></ol>
+              
+              <figure class="shot">
+                <input type="checkbox" id="zoom-2" class="zoom-toggle" aria-label="Perbesar gambar langkah 2">
+                <label for="zoom-2" class="shot-frame" style="--ar:2.2789">
+                  <span class="win-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="shot-img">
+                    <img src="assets/hosting-02.webp" width="1299" height="570" alt="Halaman Sign in to GitHub berisi kolom username, password, dan tombol Sign in" decoding="async">
+                    <span class="hl" style="left:35.566%;top:33.509%;width:27.714%;height:7.719%"><b class="l">1</b></span><span class="hl" style="left:35.566%;top:47.895%;width:27.714%;height:7.719%"><b class="l">2</b></span><span class="hl" style="left:35.566%;top:57.895%;width:27.714%;height:7.719%"><b class="l">3</b></span>
+                    <i class="snap-mid" aria-hidden="true"></i>
+                  </span>
+                  <span class="zoom-hint" aria-hidden="true"></span>
+                </label>
+              </figure>
+            </article>
+          </li>
+        </ol>
+      </section>
+      <section class="phase" aria-labelledby="tahap-2">
+        <h2 class="phase-title" id="tahap-2"><span class="phase-pill">Tahap 2</span>Buat repositori</h2>
+        <ol class="steps" role="list">
+          <li class="step">
+            <span class="node" aria-hidden="true">3</span>
+            <article class="step-card">
+              <p class="step-no">Langkah 3 dari 10</p>
+              <h3>Masuk ke daftar repositori</h3>
+              <p class="step-text">Setelah login, kamu berada di beranda (Dashboard). Buka menu profil, lalu masuk ke repositori.</p>
+              <ol class="marks"><li><b class="mk">1</b><span>Klik foto profil di pojok kanan atas</span></li><li><b class="mk">2</b><span>Pilih <b class="ui">Repositories</b></span></li></ol>
+              
+              <figure class="shot">
+                <input type="checkbox" id="zoom-3" class="zoom-toggle" aria-label="Perbesar gambar langkah 3">
+                <label for="zoom-3" class="shot-frame" style="--ar:2.2951">
+                  <span class="win-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="shot-img">
+                    <img src="assets/hosting-03.webp" width="1299" height="566" alt="Dashboard GitHub dengan menu profil terbuka dan pilihan Repositories" loading="lazy" decoding="async">
+                    <span class="hl" style="left:94.688%;top:1.943%;width:3.156%;height:7.067%"><b class="in">1</b></span><span class="hl" style="left:78.060%;top:33.746%;width:18.938%;height:6.537%"><b class="in">2</b></span>
+                    <i class="snap-mid" aria-hidden="true"></i>
+                  </span>
+                  <span class="zoom-hint" aria-hidden="true"></span>
+                </label>
+              </figure>
+            </article>
+          </li>
+          <li class="step">
+            <span class="node" aria-hidden="true">4</span>
+            <article class="step-card">
+              <p class="step-no">Langkah 4 dari 10</p>
+              <h3>Buat repositori baru</h3>
+              <p class="step-text">Di halaman Repositories, tekan tombol hijau <b class="ui">New</b>.</p>
+              
+              
+              <figure class="shot">
+                <input type="checkbox" id="zoom-4" class="zoom-toggle" aria-label="Perbesar gambar langkah 4">
+                <label for="zoom-4" class="shot-frame" style="--ar:2.2830">
+                  <span class="win-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="shot-img">
+                    <img src="assets/hosting-04.webp" width="1299" height="569" alt="Daftar repositori dengan tombol hijau New di kanan atas" loading="lazy" decoding="async">
+                    <span class="hl" style="left:89.684%;top:22.144%;width:6.774%;height:6.151%"></span>
+                    <i class="snap-mid" aria-hidden="true"></i>
+                  </span>
+                  <span class="zoom-hint" aria-hidden="true"></span>
+                </label>
+              </figure>
+            </article>
+          </li>
+          <li class="step">
+            <span class="node" aria-hidden="true">5</span>
+            <article class="step-card">
+              <p class="step-no">Langkah 5 dari 10</p>
+              <h3>Isi data repositori</h3>
+              <p class="step-text">Beri nama repositori dan isi deskripsinya, pastikan dibuat Public, lalu tekan Create. Nama repositori nanti menjadi bagian dari alamat websitemu, dan hanya boleh berisi huruf, angka, titik, strip, atau garis bawah (tanpa spasi).</p>
+              <ol class="marks"><li><b class="mk">1</b><span>Isi <b class="ui">Repository name</b></span></li><li><b class="mk">2</b><span>Isi <b class="ui">Description</b></span></li><li><b class="mk">3</b><span>Pastikan <b class="ui">Choose visibility</b> = <b class="ui">Public</b></span></li><li><b class="mk">4</b><span>Tekan <b class="ui">Create repository</b></span></li></ol>
+              
+              <figure class="shot">
+                <input type="checkbox" id="zoom-5" class="zoom-toggle" aria-label="Perbesar gambar langkah 5">
+                <label for="zoom-5" class="shot-frame" style="--ar:2.2789">
+                  <span class="win-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="shot-img">
+                    <img src="assets/hosting-05.webp" width="1299" height="570" alt="Formulir Create a new repository: nama, deskripsi, visibility Public, dan tombol Create repository" loading="lazy" decoding="async">
+                    <span class="hl" style="left:38.799%;top:29.123%;width:29.099%;height:4.561%"><b class="r">1</b></span><span class="hl" style="left:30.947%;top:45.263%;width:36.952%;height:4.561%"><b class="r">2</b></span><span class="hl" style="left:61.047%;top:61.404%;width:6.005%;height:4.561%"><b class="r">3</b></span><span class="hl" style="left:60.508%;top:95.439%;width:7.390%;height:4.561%"><b class="r">4</b></span>
+                    <i class="snap-mid" aria-hidden="true"></i>
+                  </span>
+                  <span class="zoom-hint" aria-hidden="true"></span>
+                </label>
+              </figure>
+            </article>
+          </li>
+        </ol>
+      </section>
+      <section class="phase" aria-labelledby="tahap-3">
+        <h2 class="phase-title" id="tahap-3"><span class="phase-pill">Tahap 3</span>Unggah file website</h2>
+        <ol class="steps" role="list">
+          <li class="step">
+            <span class="node" aria-hidden="true">6</span>
+            <article class="step-card">
+              <p class="step-no">Langkah 6 dari 10</p>
+              <h3>Buka menu upload file</h3>
+              <p class="step-text">Di halaman repositori yang baru dibuat, buka menu <b class="ui">Add file</b> lalu pilih <b class="ui">Upload files</b>.</p>
+              <ol class="marks"><li><b class="mk">1</b><span>Klik <b class="ui">Add file</b></span></li><li><b class="mk">2</b><span>Pilih <b class="ui">Upload files</b></span></li></ol>
+              
+              <figure class="shot">
+                <input type="checkbox" id="zoom-6" class="zoom-toggle" aria-label="Perbesar gambar langkah 6">
+                <label for="zoom-6" class="shot-frame" style="--ar:2.2552">
+                  <span class="win-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="shot-img">
+                    <img src="assets/hosting-06.webp" width="1299" height="576" alt="Halaman repositori dengan menu Add file terbuka dan pilihan Upload files" loading="lazy" decoding="async">
+                    <span class="hl" style="left:53.734%;top:23.785%;width:5.312%;height:4.514%"><b class="tl">1</b></span><span class="hl" style="left:54.196%;top:32.812%;width:9.315%;height:4.340%"><b class="l">2</b></span>
+                    <i class="snap-mid" aria-hidden="true"></i>
+                  </span>
+                  <span class="zoom-hint" aria-hidden="true"></span>
+                </label>
+              </figure>
+            </article>
+          </li>
+          <li class="step">
+            <span class="node" aria-hidden="true">7</span>
+            <article class="step-card">
+              <p class="step-no">Langkah 7 dari 10</p>
+              <h3>Unggah semua file website</h3>
+              <p class="step-text">Seret (drag and drop) semua file website ke halaman upload, atau pilih lewat jendela <b class="ui">Open</b>. Pastikan semuanya ikut: halaman <code>.html</code>, <code>style.css</code>, dan folder <code>assets</code>. Setelah itu tekan <b class="ui">Commit changes</b>.</p>
+              <ol class="marks"><li><b class="mk">1</b><span>Pilih semua file website</span></li><li><b class="mk">2</b><span>Tekan <b class="ui">Commit changes</b></span></li></ol>
+              
+              <figure class="shot">
+                <input type="checkbox" id="zoom-7" class="zoom-toggle" aria-label="Perbesar gambar langkah 7">
+                <label for="zoom-7" class="shot-frame" style="--ar:2.2951">
+                  <span class="win-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="shot-img">
+                    <img src="assets/hosting-07.webp" width="1299" height="566" alt="Jendela pilih file berisi assets, index, isu-keamanan-data, langkah-hosting, style, dan tugas, dengan tombol Commit changes di belakangnya" loading="lazy" decoding="async">
+                    <span class="hl" style="left:57.429%;top:7.774%;width:36.490%;height:23.145%"><b class="l">1</b></span><span class="hl" style="left:20.939%;top:88.163%;width:7.621%;height:4.417%"><b class="l">2</b></span>
+                    <i class="snap-mid" aria-hidden="true"></i>
+                  </span>
+                  <span class="zoom-hint" aria-hidden="true"></span>
+                </label>
+              </figure>
+            </article>
+          </li>
+        </ol>
+      </section>
+      <section class="phase" aria-labelledby="tahap-4">
+        <h2 class="phase-title" id="tahap-4"><span class="phase-pill">Tahap 4</span>Aktifkan GitHub Pages</h2>
+        <ol class="steps" role="list">
+          <li class="step">
+            <span class="node" aria-hidden="true">8</span>
+            <article class="step-card">
+              <p class="step-no">Langkah 8 dari 10</p>
+              <h3>Atur GitHub Pages</h3>
+              <p class="step-text">Buka tab <b class="ui">Settings</b> di repositori, pilih <b class="ui">Pages</b> di menu kiri. Pada bagian Branch, ubah <b class="ui">None</b> menjadi <b class="ui">main</b>, lalu tekan <b class="ui">Save</b>.</p>
+              <ol class="marks"><li><b class="mk">1</b><span>Buka tab <b class="ui">Settings</b></span></li><li><b class="mk">2</b><span>Pilih <b class="ui">Pages</b></span></li><li><b class="mk">3</b><span>Ubah <b class="ui">None</b> menjadi <b class="ui">main</b></span></li><li><b class="mk">4</b><span>Tekan <b class="ui">Save</b></span></li></ol>
+              
+              <figure class="shot">
+                <input type="checkbox" id="zoom-8" class="zoom-toggle" aria-label="Perbesar gambar langkah 8">
+                <label for="zoom-8" class="shot-frame" style="--ar:2.2830">
+                  <span class="win-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="shot-img">
+                    <img src="assets/hosting-08.webp" width="1299" height="569" alt="Pengaturan GitHub Pages dengan pilihan branch None dan main" loading="lazy" decoding="async">
+                    <span class="hl" style="left:44.265%;top:7.381%;width:5.158%;height:5.272%"><b class="r">1</b></span><span class="hl" style="left:17.398%;top:73.111%;width:13.857%;height:4.569%"><b class="l">2</b></span><span class="hl" style="left:33.487%;top:64.499%;width:16.012%;height:4.394%"><b class="l">3</b></span><span class="hl" style="left:37.567%;top:48.506%;width:3.695%;height:4.394%"><b class="r">4</b></span>
+                    <i class="snap-mid" aria-hidden="true"></i>
+                  </span>
+                  <span class="zoom-hint" aria-hidden="true"></span>
+                </label>
+              </figure>
+            </article>
+          </li>
+          <li class="step">
+            <span class="node" aria-hidden="true">9</span>
+            <article class="step-card">
+              <p class="step-no">Langkah 9 dari 10</p>
+              <h3>Tunggu sampai website aktif</h3>
+              <p class="step-text">Tunggu sebentar sampai muncul keterangan <b class="ui">Your site is live at …</b> beserta tombol <b class="ui">Visit site</b>. Itu tanda websitemu sudah online. Kalau belum muncul, tunggu sebentar lalu muat ulang halaman.</p>
+              
+              
+              <figure class="shot">
+                <input type="checkbox" id="zoom-9" class="zoom-toggle" aria-label="Perbesar gambar langkah 9">
+                <label for="zoom-9" class="shot-frame" style="--ar:2.2830">
+                  <span class="win-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="shot-img">
+                    <img src="assets/hosting-09.webp" width="1299" height="569" alt="Halaman GitHub Pages dengan keterangan Your site is live dan tombol Visit site" loading="lazy" decoding="async">
+                    <span class="hl" style="left:33.718%;top:25.659%;width:47.575%;height:9.315%"></span>
+                    <i class="snap-mid" aria-hidden="true"></i>
+                  </span>
+                  <span class="zoom-hint" aria-hidden="true"></span>
+                </label>
+              </figure>
+            </article>
+          </li>
+        </ol>
+      </section>
+      <section class="phase" aria-labelledby="tahap-5">
+        <h2 class="phase-title" id="tahap-5"><span class="phase-pill">Tahap 5</span>Website online</h2>
+        <ol class="steps" role="list">
+          <li class="step done">
+            <span class="node" aria-hidden="true">✓</span>
+            <article class="step-card">
+              <p class="step-no">Langkah 10 dari 10<span class="done-tag">Selesai</span></p>
+              <h3>Copy link — website sudah online</h3>
+              <p class="step-text">Klik Visit site atau copy link dari kolom alamat browser. Link ini sudah bisa dipakai secara online oleh siapa saja, gratis.</p>
+              
+              <p class="link-form">Bentuk linknya: <code>https://&lt;username&gt;.github.io/&lt;nama-repositori&gt;/</code></p>
+              <figure class="shot">
+                <input type="checkbox" id="zoom-10" class="zoom-toggle" aria-label="Perbesar gambar langkah 10">
+                <label for="zoom-10" class="shot-frame" style="--ar:1.9954">
+                  <span class="win-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="shot-img">
+                    <img src="assets/hosting-10.webp" width="1299" height="651" alt="Website profil yang sudah online di alamat github.io" loading="lazy" decoding="async">
+                    <span class="hl" style="left:9.392%;top:1.229%;width:77.059%;height:5.376%"></span>
+                    <i class="snap-mid" aria-hidden="true"></i>
+                  </span>
+                  <span class="zoom-hint" aria-hidden="true"></span>
+                </label>
+              </figure>
+            </article>
+          </li>
+        </ol>
+      </section>
+    </div>
   </main>
 
 </body>
