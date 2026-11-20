@@ -1132,3 +1132,44 @@ body.subpage .site-header { position: absolute; }
   .snap-mid { position: absolute; left: 50%; top: 0; width: 1px; height: 100%; pointer-events: none; }
   .zoom-toggle:checked + .shot-frame .snap-mid { scroll-snap-align: center; }
 }
+
+/* ======================================================================
+   HALAMAN ISU KEAMANAN DATA — tabel sederhana di atas kertas putih
+   ====================================================================== */
+.isu { padding-bottom: 90px; }
+.isu-wrap { max-width: 1120px; margin: 0 auto; }
+
+.isu-paper {
+  padding: clamp(18px, 4.4vw, 56px) clamp(14px, 4.4vw, 56px);
+  font-family: "Times New Roman", Tinos, "Liberation Serif", "Nimbus Roman", Times, serif;
+  font-size: clamp(14.5px, .9vw + 8px, 16.5px); line-height: 1.5; color: #17191f;
+  background: #fdfcf8; border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .3), 0 3px 8px rgba(0, 0, 0, .22), 0 26px 50px -10px rgba(0, 0, 0, .6);
+}
+table.isu { width: 100%; border-collapse: collapse; table-layout: fixed; text-align: left; }
+.isu .c-field { width: 15%; }
+.isu .c-role  { width: 17%; }
+.isu .c-who   { width: 22%; }
+.isu .c-issue { width: 46%; }
+.isu th, .isu td { padding: .55em .7em; vertical-align: top; border: 1px solid #1a1a1a; overflow-wrap: anywhere; }
+.isu thead th { background: #f1efe6; font-weight: 700; text-align: center; vertical-align: middle; }
+.isu th.field { font-weight: 700; }
+
+/* ---- layar sempit: tiap bidang jadi satu blok bertumpuk ---- */
+@media (max-width: 760px) {
+  table.isu, .isu tbody, .isu tr, .isu td, .isu th.field { display: block; }
+  .isu thead, .isu colgroup {                     /* judul kolom disembunyikan secara visual (tetap terbaca screen reader) */
+    position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+  }
+  .isu tbody { margin: 0 0 14px; border: 1px solid #1a1a1a; }
+  .isu tbody:last-child { margin-bottom: 0; }
+  .isu th, .isu td { border: 0; }
+  .isu th.field { background: #f1efe6; border-bottom: 1px solid #1a1a1a; }
+  .isu tbody tr + tr { border-top: 1px solid #1a1a1a; }
+  .isu td { padding-top: .35em; padding-bottom: .35em; }
+  .isu th.field + td, .isu tr > td:first-child { padding-top: .65em; }
+  .isu td:last-child { padding-bottom: .7em; }
+  .isu td::before {
+    content: attr(data-label); display: block; font-size: .78em; font-weight: 700; letter-spacing: .02em; color: #555;
+  }
+}

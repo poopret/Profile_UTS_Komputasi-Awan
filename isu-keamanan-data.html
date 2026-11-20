@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="subpage">
@@ -25,8 +25,83 @@
     </nav>
   </header>
 
-  <main class="page">
-    <!-- Halaman Isu Keamanan Data: sementara dikosongkan. Isi konten di sini. -->
+  <!--
+    HALAMAN ISU KEAMANAN DATA — tabel pemangku kepentingan dan isu keamanan data utama.
+    Tabel sederhana di atas selembar kertas putih (kolom Bidang digabung per 3 baris dengan rowspan).
+    HP: tiap bidang menjadi satu blok, tiap pemangku kepentingan satu baris bertumpuk.
+    Mau menambah bidang? Salin satu <tbody> utuh dan ubah nomor + isinya.
+  -->
+  <main class="page isu">
+    <div class="isu-wrap">
+
+      <header class="h-hero">
+        <p class="eyebrow">Tabel</p>
+        <h1>Isu Keamanan Data <span class="acc">pada Aplikasi SaaS</span></h1>
+        <p class="h-lead">Pemangku kepentingan beserta isu keamanan data utamanya pada tiga bidang aplikasi SaaS: reservasi hotel, SIM rumah sakit, dan perbankan.</p>
+      </header>
+
+      <div class="isu-paper">
+        <table class="isu">
+          <caption class="sr-only">Pemangku kepentingan dan isu keamanan data utama pada tiga bidang aplikasi SaaS</caption>
+          <colgroup><col class="c-field"><col class="c-role"><col class="c-who"><col class="c-issue"></colgroup>
+          <thead>
+            <tr><th scope="col">Bidang Aplikasi SaaS</th><th scope="col">Pemangku Kepentingan</th><th scope="col">Pihak Terkait (Stakeholder)</th><th scope="col">Isu Keamanan Data Utama</th></tr>
+          </thead>
+        <tbody>
+          <tr>
+            <th scope="rowgroup" rowspan="3" class="field">1. Reservasi Hotel</th><td data-label="Pemangku Kepentingan">Pengendali Data</td>
+            <td data-label="Pihak Terkait (Stakeholder)">Manajemen Hotel / Properti</td>
+            <td data-label="Isu Keamanan Data Utama">Penyalahgunaan akses staf (insider threat) dan retensi salinan KTP/kartu tamu berlebihan.</td>
+          </tr>
+          <tr>
+            <td data-label="Pemangku Kepentingan">Pemroses Data</td>
+            <td data-label="Pihak Terkait (Stakeholder)">Vendor SaaS Reservasi &amp; Cloud</td>
+            <td data-label="Isu Keamanan Data Utama">Kebocoran data antar-tenant (cross-tenant) dan celah keamanan API ke OTA / payment gateway.</td>
+          </tr>
+          <tr>
+            <td data-label="Pemangku Kepentingan">Pemilik Data</td>
+            <td data-label="Pihak Terkait (Stakeholder)">Tamu Hotel / Pelanggan</td>
+            <td data-label="Isu Keamanan Data Utama">Phishing berkedok konfirmasi booking dan pencurian identitas saat pre-check-in.</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th scope="rowgroup" rowspan="3" class="field">2. SIM Rumah Sakit</th><td data-label="Pemangku Kepentingan">Pengendali Data</td>
+            <td data-label="Pihak Terkait (Stakeholder)">Manajemen Rumah Sakit / Faskes</td>
+            <td data-label="Isu Keamanan Data Utama">Hak akses berlebihan (over-privileged) dan penggunaan akun bersama (shared account).</td>
+          </tr>
+          <tr>
+            <td data-label="Pemangku Kepentingan">Pemroses Data</td>
+            <td data-label="Pihak Terkait (Stakeholder)">Vendor SaaS SIMRS &amp; Cloud</td>
+            <td data-label="Isu Keamanan Data Utama">Gangguan layanan akibat ransomware/downtime dan paparan data medis (PHI) saat pemeliharaan.</td>
+          </tr>
+          <tr>
+            <td data-label="Pemangku Kepentingan">Pemilik Data</td>
+            <td data-label="Pihak Terkait (Stakeholder)">Pasien</td>
+            <td data-label="Isu Keamanan Data Utama">Tersebarnya riwayat penyakit sensitif tanpa izin dan risiko perubahan data alergi/resep obat.</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th scope="rowgroup" rowspan="3" class="field">3. Perbankan</th><td data-label="Pemangku Kepentingan">Pengendali Data</td>
+            <td data-label="Pihak Terkait (Stakeholder)">Bank / Lembaga Jasa Keuangan</td>
+            <td data-label="Isu Keamanan Data Utama">Pelanggaran lokasi penyimpanan data (data residency) dan kebocoran data lewat mitra pihak ketiga.</td>
+          </tr>
+          <tr>
+            <td data-label="Pemangku Kepentingan">Pemroses Data</td>
+            <td data-label="Pihak Terkait (Stakeholder)">Vendor SaaS Perbankan &amp; Cloud</td>
+            <td data-label="Isu Keamanan Data Utama">API hijacking pada transaksi, supply chain attack pada pembaruan SaaS, dan lemahnya manajemen kunci enkripsi.</td>
+          </tr>
+          <tr>
+            <td data-label="Pemangku Kepentingan">Pemilik Data</td>
+            <td data-label="Pihak Terkait (Stakeholder)">Nasabah Bank</td>
+            <td data-label="Isu Keamanan Data Utama">Account takeover (pencurian OTP / bypass e-KYC) dan penyalahgunaan identitas untuk pinjaman ilegal.</td>
+          </tr>
+        </tbody>
+        </table>
+      </div>
+
+    </div>
   </main>
 
 </body>
